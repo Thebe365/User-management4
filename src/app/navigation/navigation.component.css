@@ -1,0 +1,31 @@
+.navigation{
+    background-color: rgb(13, 12, 29);
+    padding: 1rem 4rem;
+    display: flex;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+a:hover{
+    background-color: white;
+    color: black;
+}
+
+.active{
+    background-color: white;
+    color: black;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}

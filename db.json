@@ -1,0 +1,24 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Thebe",
+      "lastName": "Tongwane",
+      "Email": "thebe@gmail.com",
+      "phone": "0670462901",
+      "password": "admin@123",
+      "role": "admin",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "John",
+      "lastName": "Doe",
+      "Email": "johnDoe@gmail.com",
+      "Phone": "0684521574",
+      "password": "johndoe1234",
+      "role": "Developer",
+      "active": true
+    }
+  ]
+}

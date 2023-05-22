@@ -1,0 +1,36 @@
+.form-cont{
+    width: 400px;
+    padding: 20px 40px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.container{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.page-cont{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.btn{
+    width: 100%;
+    background-color: rgb(22, 27, 51);
+    color: white;
+    margin: 10px 0;
+}
+
+.btn:hover{
+    background-color: rgb(71, 73, 115);
+    color: white;
+}

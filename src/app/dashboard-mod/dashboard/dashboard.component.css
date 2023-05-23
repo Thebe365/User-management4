@@ -33,3 +33,13 @@ li{
     /* border-radius: 8px; */
     background-color: #243B4A;
 }
+
+tr:nth-child(even){
+    background-color: rgb(13, 12, 29);
+    color: white;
+}
+
+thead{
+    background-color: rgb(13, 12, 29);
+    color: white;
+}

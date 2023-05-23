@@ -17,7 +17,7 @@ export class AuthService {
     }
 
     // Get user by id
-    getUserById(id: string){
+    getUserById(id: any){
       return this.http.get(this.url + '/' + id)
     }
 
@@ -29,5 +29,15 @@ export class AuthService {
     // Update user details
     updateUser(id: string, inputData: any){
       return this.http.put(this.url + '/' + id, inputData)
+    }
+
+    //User is logged in
+    loggedIn(){
+      return sessionStorage.getItem('email')!=null
+    }
+
+    // User role
+    getRole(){
+      return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():''
     }
 }

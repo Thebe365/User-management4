@@ -24,5 +24,29 @@
     <div class="main">
 
         <h3>main panel</h3>
+        <div class="table-cont">
+            <table class="ui table">
+                <thead>
+                  <tr><th>Name</th>
+                  <th>Last name</th>
+                  <th>Phone number</th>
+                  <th>Email</th>
+                  <th>active</th>
+                  <th>Role</th>
+
+                </tr></thead>
+                <tbody >
+                  <tr *ngFor="let item of userdata">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.lastName }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.active }}</td>
+                    <td>{{ item.role }}</td>
+                  </tr>
+                </tbody>
+            </table>
+
+        </div>
     </div>
 </div>

@@ -7,14 +7,17 @@
                 </div>
                 <div class="field">
                   <label>Email</label>
-                  <input type="email" formControlName="email" placeholder="Enter email address">
+                  <input type="email" formControlName="id" placeholder="Enter email address">
                 </div>
                 <div class="field">
                   <label>Password</label>
                   <input type="password" formControlName="password" placeholder="Enter password">
                 </div>
-                <button [disabled]="!form.valid" class="ui btn button" type="submit">Submit</button>
-              </form>    
+                <button class="ui btn button" type="submit">Submit</button>
+              </form> 
+              <div class="field">
+                <a routerLink="/sign-up">Don't have an account?</a>
+              </div>   
         </div>
     </div>
 </div>

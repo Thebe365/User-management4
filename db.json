@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "id": 1,
+      "id": "thebe@gmail.com",
       "name": "Thebe",
       "lastName": "Tongwane",
       "Email": "thebe@gmail.com",
@@ -11,13 +11,53 @@
       "active": true
     },
     {
-      "id": 2,
+      "id": "johnDoe@gmail.com",
       "name": "John",
       "lastName": "Doe",
-      "Email": "johnDoe@gmail.com",
       "Phone": "0684521574",
       "password": "johndoe1234",
       "role": "Developer",
+      "active": true
+    },
+    {
+      "id": "jdoe@gmail.com",
+      "name": "jane",
+      "lastName": "doe",
+      "phone": "012354",
+      "password": "1234",
+      "confPassword": "1234",
+      "role": "user",
+      "active": false
+    },
+    {
+      "name": "Thebe",
+      "lastName": "Tongwane",
+      "email": "Thebe@digilink.africa",
+      "phone": "0670462901",
+      "password": "1234",
+      "confPassword": "1234",
+      "role": "user",
+      "active": false,
+      "id": "Thebe@digilink.africa"
+    },
+    {
+      "name": "jack",
+      "lastName": "black",
+      "id": "jblack@gmail.com",
+      "phone": "01236544",
+      "password": "1234",
+      "confPassword": "1234",
+      "role": "user",
+      "active": true
+    },
+    {
+      "name": "john",
+      "lastName": "graves",
+      "id": "jgraves@gmail.com",
+      "phone": "011232448",
+      "password": "1234",
+      "confPassword": "1234",
+      "role": "user",
       "active": true
     }
   ]

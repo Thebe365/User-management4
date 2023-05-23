@@ -26,24 +26,28 @@ export class SignUpComponent implements OnInit{
   confPassword: string = ""
   form: FormGroup = this.initForm();
   
-
+  users: object = []
   constructor(private fb: FormBuilder, private router: Router, private service: AuthService) {}
 
+  
   initForm() {
 
     // console.log(this.http.getAll.length)
     let form = this.fb.group({
       name: this.fb.control('', Validators.required),
       lastName: this.fb.control('', Validators.required),
-      email: this.fb.control('', [Validators.required, Validators.email]),
-      phoneNumber: this.fb.control('', Validators.required),
+      id: this.fb.control('', [Validators.required, Validators.email]),
+      phone: this.fb.control('', Validators.required),
       password: this.fb.control('', Validators.required),
-      confPassword: this.fb.control('', Validators.required)
+      confPassword: this.fb.control('', Validators.required),
+      role: this.fb.control('user'),
+      active: this.fb.control(true)
     });
     form.addValidators(this.matchValidator(form.get('password'), form.get('confPassword')));
     return form;
   }
 
+  
   matchValidator(
     control: AbstractControl<ɵGetProperty<ɵTypedOrUntyped<any, ɵFormGroupRawValue<any>, any>, "password">> | null,
     controlTwo: AbstractControl<ɵGetProperty<ɵTypedOrUntyped<any, ɵFormGroupRawValue<any>, any>, "confPassword">> | null
@@ -61,9 +65,24 @@ export class SignUpComponent implements OnInit{
     // Check if form is valid
     if(this.form.valid){
       
+      console.log(this.form.value)
       // Enter new user
-      console.log("It must work")
-      console.log(this.service.getAllUsers())
+      this.service.registerUser(this.form.value).subscribe(res =>{
+        this.users = res
+      }, (error: Response) => {
+        if(error.status === 500){
+          Swal.fire({
+            title: 'Error',
+            text: 'User already exists.',
+            imageUrl: 'https://64.media.tumblr.com/6f223b7b7e3be3353873ae59a2b1fc5a/tumblr_pvvlqkzDAJ1xd6vc6o1_540.gif',
+            imageWidth: 400,
+            imageHeight: 300,
+            imageAlt: 'Custom image',
+          })
+        }else{
+          console.log("Something definately went wrong")
+        }
+      })
 
     }else if(this.form.invalid){
       
@@ -78,6 +97,6 @@ export class SignUpComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    
+
   }
 }
